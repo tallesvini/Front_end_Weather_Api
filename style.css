@@ -1,0 +1,207 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: linear-gradient(to right, #1374F2 , #30A8F2);
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.corpo {
+    background-color: #ffffff;
+    box-shadow: 3px 3px 5px #0476D9;
+    position: relative;
+    top: 10vh;
+    left: 50%;
+    transform: translate(-50%);
+    width: 500px;
+    height: 80vh;
+    border-radius: 15px;
+}
+
+#cidade {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 4vh;
+    width: 250px;
+    height: 5vh;
+    border: solid 1px #BFBFBF;
+    border-radius: 5px;
+    padding-left: 10px;
+    color: #30A8F2;
+}
+
+#cidade::placeholder {
+    color: #BFBFBF;
+}
+
+textarea:focus, input:focus, select:focus {
+    outline: 0;
+}
+
+#buscar {
+    position: absolute;
+    top: 70vh;
+    left: 50%;
+    transform: translate(-50%);
+    width: 120px;
+    height: 5vh;
+    border: none;
+    color: #ffffff;
+    background-color: #1D8FF2;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#buscar:hover {
+    background-color: #ffffff;
+    border: solid 1px #1D8FF2;
+    color: #1D8FF2;
+    transition: .2s;
+}
+
+.regiao {
+    position: absolute;
+    top: 15vh;
+    left: 5vw;
+}
+
+.regiao span {
+    font-size: 1.7em;
+    color: #1D8FF2;
+    font-weight: bold;
+}
+
+.tempo {
+    position: absolute;
+    top: 25vh;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.tempo span {
+    font-size: 4em;
+    color: #1D8FF2;
+}
+
+.temperaturaMax {
+    position: absolute;
+    top: 39vh;
+    left: 58%;
+    transform: translate(-60%);
+    font-size: 1em;
+}
+
+.temperaturaMax span {
+    font-size: 1.2em;
+    color: #E43A4A;
+    font-weight: bold;
+}
+
+.temperaturaMax img {
+    width: 1.2em;
+}
+
+.temperaturaMin {
+    position: absolute;
+    top: 39vh;
+    left: 40%;
+    transform: translate(-50%);
+    font-size: 1em;
+}
+
+.temperaturaMin span {
+    font-size: 1.2em;
+    color: #66BCF2;
+    font-weight: bold;
+}
+
+.temperaturaMin img {
+    width: 1.2em;
+}
+
+.situacao {
+    position: absolute;
+    top: 45vh;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.situacao span {
+    color: #1D8FF2;
+    font-size: 1.2em;
+}
+
+.humidadeAr {
+    position: absolute;
+    left: 155px;
+    top: 53vh;
+}
+
+.humidadeAr span {
+    font-size: 1em;
+    color: #30A8F2;
+}
+
+.humidadeAr p {
+    font-size: .8em;
+    color: #595959;
+}
+
+.humidadeAr img {
+    width: 1.5em;
+}
+
+.sensacaoTemp {
+    position: absolute;
+    left: 280px;
+    top: 53vh;
+}
+
+.sensacaoTemp span {
+    font-size: 1em;
+    color: #30A8F2;
+}
+
+.sensacaoTemp p {
+    font-size: .8em;
+    color: #595959;
+}
+
+.sensacaoTemp img {
+    width: 1.5em;
+}
+
+.final h6 {
+    position: absolute;
+    top: 97vh;
+    left: 50%;
+    transform: translate(-50%);
+    font-weight: lighter;
+    color: white;
+    font-size: .6em;
+}
+
+/*mobile*/
+@media(max-width: 600px) {
+    #cidade {
+        width: 80%;
+    }
+    .corpo {
+        width: 80vw;
+    }
+
+    .humidadeAr {
+        left: 30%;
+    }
+
+    .sensacaoTemp {
+        left: 60%;
+    }
+
+    .final h6 {
+        font-size: .4em;
+    }
+}

@@ -193,6 +193,20 @@ textarea:focus, input:focus, select:focus {
         width: 80vw;
     }
 
+    .regiao span {
+        font-size: 1.2em;
+    }
+
+    .temperaturaMax {
+        left: 60%;
+        transform: translate(-50%);
+    }
+
+    .temperaturaMin {
+        left: 33%;
+        transform: translate(-50%);
+    }
+
     .humidadeAr {
         left: 30%;
     }

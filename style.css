@@ -190,6 +190,7 @@ textarea:focus, input:focus, select:focus {
         width: 80%;
     }
     .corpo {
+        top: 5vh;
         width: 80vw;
     }
 
@@ -208,7 +209,7 @@ textarea:focus, input:focus, select:focus {
     }
 
     .humidadeAr {
-        left: 30%;
+        left: 20%;
     }
 
     .sensacaoTemp {

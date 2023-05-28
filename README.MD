@@ -12,7 +12,7 @@
 
 ### Sua forma: 👇🏼
 
-![TELA DE LOGIN](https://user-images.githubusercontent.com/90796934/146082530-40f9f9b3-f2d5-4442-93bd-5fc28f7b89a5.PNG)
+![Tela Front-end](https://github.com/tallesvini/Front_end_Weather_Api/assets/90796934/b6c21cb2-98f0-490e-b832-ac52eb07ee51)
 
 #### ✅ Caso haja dúvida sobre, entre em contato comigo pelo <a href="https://www.instagram.com/tallesvn_/" target="_blank">Instagram</a>.
 

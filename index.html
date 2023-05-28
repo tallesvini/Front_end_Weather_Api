@@ -7,59 +7,92 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@0;1&family=Open+Sans+Condensed:wght@300&family=Roboto:wght@100&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
     <script src="js/jquery.js"></script>
     
-    <title>Clima</title>
+    <title>Clima Mundial</title>
 </head>
 <body>
     <main>
-        <div class="corpo">
-            <input id="cidade" type="text" placeholder="Busque a cidade...">
-            <div class="detalhes">
+        <img id="slakk" src="imagens/wallpapers/unknown.jpg">       
+        <div class="container">
+            <div class="dados_temperatura">
                 <div class="regiao"> 
                     <p>Tempo em</p>
                     <span id="local">Cidade</span>
+                    <span id="país">País</span>
                 </div>
-
-                <div class="tempo">
-                    <span id="temperatura">0°</span>
-                </div>
-
-                <div class="situacao">
-                    <span id="descricao"></span>
-                </div>
-
-                <div class="temperaturaMax">
-                    <img src="imagens/icones/seta-calor.png">
-                    <span id="tempMax">0°</span>
-                </div>
-
-                <div class="temperaturaMin">
-                    <img src="imagens/icones/seta-frio.png">
-                    <span id="tempMin">0°</span>
-                </div>
-
-                <div class="humidadeAr">
-                    <img src="imagens/icones/humidade.png">
-                    <p>Humidade</p>
-                    <span id="humidade">0°</span>
-                </div>
-
-                <div class="sensacaoTemp">
-                    <img src="imagens/icones/temperatura.png">
-                    <p>Sensação</p>
-                    <span id="sensacao">0°</span>
-                </div>
-            </div>  
-            <button id="buscar">Buscar</button>
+                <div class="container-clima">
+                    <div class="fatores_climaticos">
+                        <div>
+                            <div class="icones">
+                                <img id="imagem_temp" src="imagens/icons_temp/unknown.png">
+                            </div>
+                            <div class="situacao">
+                                <span id="descricao"></span>
+                            </div>  
+                        </div>
+                        <div class="tempo">
+                            <span id="temperatura">0°</span>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+            <div class="corpo">
+                <div class="input-container">
+                    <input 
+                        type="text" 
+                        id="cidade"
+                        class="text-input"
+                        autocomplete="off"
+                        placeholder="Digite aqui"   
+                    >  
+                    <label for="username" class="label">Qual sua cidade?</label>                       
+                </div>   
+                <div class="detalhes"> 
+                    <div class="dados_temp">
+                        <div class="parametros_temp_1">
+    
+                            <div class="min_max">
+                                <div class="temperaturaMax">
+                                    <img src="imagens/icones/seta-calor.png">
+                                    <span id="tempMax">0°</span>
+                                </div>
+                
+                                <div class="temperaturaMin">
+                                    <img src="imagens/icones/seta-frio.png">
+                                    <span id="tempMin">0°</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="dados">           
+                        <div class="humidadeAr">
+                            <img src="imagens/icones/humidade.png">
+                            <p>Humidade</p>
+                            <span id="humidade">0°</span>
+                        </div>
+        
+                        <div class="sensacaoTemp">
+                            <img src="imagens/icones/temperatura.png">
+                            <p>Sensação</p>
+                            <span id="sensacao">0°</span>
+                        </div>
+                    </div>
+                </div>  
+                <button id="buscar">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" style="fill: #0D8BD9"/></svg>
+                    Buscar
+                </button>
+            </div>     
         </div>
     </main>
     <footer class="final">
-        <h6>Copyright 2022 TM Code - Todos os direitos reservados</h6>
+        <h6>Copyright 2023 TM Code - Todos os direitos reservados</h6>
     </footer>
+
 </body>
     <script src="js/script.js"></script>
 </html>

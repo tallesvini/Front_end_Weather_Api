@@ -1,58 +1,190 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-image: linear-gradient(to right, #1374F2 , #30A8F2);
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.container-clima {
+    background-color: #ffffffb0 !important;
+    position: relative;
+}
+
+/*side left*/
+.regiao {
+    position: absolute;
+    margin-top: 5vh;
+    left: 5vw;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+#local, #país {
+    color: #0D8BD9;
+}
+
+.regiao span {
+    font-size: 1.6em;
+
+    font-weight: bold;
+}
+
+.icones {
+    display: flex;
+    justify-content: center;
+    padding-top: 0vh;
+    position: relative;
+}
+
+.tempo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0vh;
+    position: relative;
+}
+
+#temperatura {
+    font-size: 10rem;
+    font-weight: 700;
+    color: #0D8BD9;
+}
+
+.situacao {
+    display: flex;
+    justify-content: center;
+    margin-top: 0vh;
+    position: relative;
+}
+
+.situacao span {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+#descricao {
+    color: #0D8BD9;
+    text-transform: uppercase;
+}
+
+.fatores_climaticos {
+    display: grid;
+    grid-template-columns: 30% 65%;
+    padding: 0 5%;
+    margin-top: 50vh;
 }
 
 .corpo {
-    background-color: #ffffff;
-    box-shadow: 3px 3px 5px #0476D9;
+    background-color: white !important;
     position: relative;
-    top: 10vh;
-    left: 50%;
-    transform: translate(-50%);
-    width: 500px;
-    height: 80vh;
-    border-radius: 15px;
+    height: 100vh;
+    width: 100%;
 }
 
-#cidade {
+.input-container {
+    width: 240px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    top: 3vh;
+    height: 6vh;
+}
+
+.input-container > input {
+    border: solid 1px #0D8BD9;
+}
+
+.label {
     position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    top: 4vh;
-    width: 250px;
-    height: 5vh;
-    border: solid 1px #BFBFBF;
-    border-radius: 5px;
-    padding-left: 10px;
-    color: #30A8F2;
+    left: 10px;
+    top: 10px;
+    transition: all .2s;
+    padding: 0 2px;
+    z-index: 1;
+    color: #0D8BD9;
+    user-select: none;
 }
 
-#cidade::placeholder {
+.text-input {
+    padding: .8rem;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #BFBFBF;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    font-size: 15px;
+    outline: none;
+    transition: all .3s;
+    color: #3E3E40;
+}
+
+.text-input::placeholder {
     color: #BFBFBF;
 }
 
-textarea:focus, input:focus, select:focus {
-    outline: 0;
+.label::before {
+    content: '';
+    height: 5px;
+    background-color: #FFFFFF;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 100%;
+    z-index: -1;
+}
+
+.text-input:focus {
+    border: 2px solid #0D8BD9;
+}
+
+.text-input:focus + .label {
+    top: -10px;
+    color: #0D8BD9;
+    font-size: 18px;
+}
+
+.text-input::placeholder {
+    font-size: 16px;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.text-input:focus::placeholder {
+    opacity: 1;
+}
+
+.text-input:not(:placeholder-shown) + .label {
+    top: -10px;
+    color: #0D8BD9;
+    font-size: 18;
 }
 
 #buscar {
     position: absolute;
-    top: 70vh;
+    margin-top: 5vh;
     left: 50%;
     transform: translate(-50%);
-    width: 120px;
-    height: 5vh;
+    width: 150px;
+    height: 6vh;
     border: none;
-    color: #ffffff;
-    background-color: #1D8FF2;
+    color: #0D8BD9;
+    background-color: #fff;
+    border: solid 1px #0D8BD9;
     border-radius: 5px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 #buscar:hover {
@@ -62,116 +194,153 @@ textarea:focus, input:focus, select:focus {
     transition: .2s;
 }
 
+
+.dados_temp {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
 .regiao {
     position: absolute;
-    top: 15vh;
+    margin-top: 5vh;
     left: 5vw;
 }
 
 .regiao span {
-    font-size: 1.7em;
+    font-size: 1.6em;
     color: #1D8FF2;
     font-weight: bold;
 }
 
 .tempo {
-    position: absolute;
-    top: 25vh;
-    left: 50%;
-    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0vh;
+    position: relative;
+
 }
 
 .tempo span {
-    font-size: 4em;
-    color: #1D8FF2;
+    font-size: 8em;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.min_max {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5rem;
+}
+
+.dados_temp {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffffb0 !important;
+    margin-top: 8vh;
+    padding: 10px;
+    width: 100%;
 }
 
 .temperaturaMax {
-    position: absolute;
-    top: 39vh;
-    left: 58%;
-    transform: translate(-60%);
-    font-size: 1em;
+  
+    font-size: 1.5em;
 }
 
 .temperaturaMax span {
-    font-size: 1.2em;
+    font-size: 2em;
     color: #E43A4A;
     font-weight: bold;
 }
 
 .temperaturaMax img {
-    width: 1.2em;
+    width: 1.5em;
 }
 
 .temperaturaMin {
-    position: absolute;
-    top: 39vh;
-    left: 40%;
-    transform: translate(-50%);
-    font-size: 1em;
+    
+    font-size: 1.5em;
 }
 
 .temperaturaMin span {
-    font-size: 1.2em;
+    font-size: 2em;
     color: #66BCF2;
     font-weight: bold;
 }
 
 .temperaturaMin img {
-    width: 1.2em;
+    width: 1.5em;
+}
+
+.icones {
+    display: flex;
+    justify-content: center;
+    padding-top: 0vh;
+    position: relative;
 }
 
 .situacao {
-    position: absolute;
-    top: 45vh;
-    left: 50%;
-    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+    margin-top: 0vh;
+
 }
 
 .situacao span {
     color: #1D8FF2;
-    font-size: 1.2em;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.dados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+    margin-top: 8vh;
+    width: 100%;
 }
 
 .humidadeAr {
-    position: absolute;
-    left: 155px;
-    top: 53vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .humidadeAr span {
-    font-size: 1em;
+    font-size: 1.8em;
     color: #30A8F2;
 }
 
 .humidadeAr p {
-    font-size: .8em;
+    font-size: 1.5em;
     color: #595959;
 }
 
 .humidadeAr img {
-    width: 1.5em;
+    width: 3em;
 }
 
 .sensacaoTemp {
-    position: absolute;
-    left: 280px;
-    top: 53vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .sensacaoTemp span {
-    font-size: 1em;
+    font-size: 1.8em;
     color: #30A8F2;
 }
 
 .sensacaoTemp p {
-    font-size: .8em;
+    font-size: 1.5em;
     color: #595959;
 }
 
 .sensacaoTemp img {
-    width: 1.5em;
+    width: 3em;
 }
 
 .final h6 {
@@ -184,39 +353,10 @@ textarea:focus, input:focus, select:focus {
     font-size: .6em;
 }
 
-/*mobile*/
-@media(max-width: 600px) {
-    #cidade {
-        width: 80%;
-    }
-    .corpo {
-        top: 5vh;
-        width: 80vw;
-    }
-
-    .regiao span {
-        font-size: 1.2em;
-    }
-
-    .temperaturaMax {
-        left: 60%;
-        transform: translate(-50%);
-    }
-
-    .temperaturaMin {
-        left: 33%;
-        transform: translate(-50%);
-    }
-
-    .humidadeAr {
-        left: 20%;
-    }
-
-    .sensacaoTemp {
-        left: 60%;
-    }
-
-    .final h6 {
-        font-size: .4em;
-    }
+#slakk {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    transition: .3s;
+    object-fit: cover;
 }
